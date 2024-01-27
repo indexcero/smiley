@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2b73ysf774fq"]
+
+[ext_resource type="Script" path="res://level_ui.gd" id="1_rqht6"]
+
+[sub_resource type="Theme" id="Theme_qpw6o"]
+default_font_size = 70
+RichTextLabel/colors/default_color = Color(0.890196, 0.960784, 0, 1)
+
+[node name="level_ui" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rqht6")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qpw6o")
+columns = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="VSeparator" type="VSeparator" parent="GridContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="GridContainer"]
+custom_minimum_size = Vector2(210, 20)
+layout_mode = 2
+text = "Vidas:"
+fit_content = true
+
+[node name="cantidad_de_vidas" type="RichTextLabel" parent="GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "XX"
+fit_content = true
