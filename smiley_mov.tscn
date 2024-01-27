@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://331nhgwqudl4"]
+
+[ext_resource type="Script" path="res://Personaje_principal.gd" id="1_su7b1"]
+[ext_resource type="Texture2D" uid="uid://dao2sphppxo5r" path="res://smiley.png" id="2_qsnpk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(174, 92)
+script = ExtResource("1_su7b1")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+scale = Vector2(0.149847, 0.113208)
+texture = ExtResource("2_qsnpk")
