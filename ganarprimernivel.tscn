@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://3vydug3s56k2"]
+[gd_scene load_steps=10 format=3 uid="uid://3vydug3s56k2"]
 
 [ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_na52q"]
 [ext_resource type="Script" path="res://finaldejuego.gd" id="2_04m2h"]
-[ext_resource type="Texture2D" uid="uid://domg8ffu8dpjc" path="res://splash_screen.png" id="3_ncsh7"]
+[ext_resource type="Texture2D" uid="uid://bo50j3jb2dk1f" path="res://fondo_menu_inicial.png" id="3_hnts3"]
+[ext_resource type="Texture2D" uid="uid://btqfr7jf3abyk" path="res://Logo_menu.png" id="4_cc7yi"]
+[ext_resource type="Texture2D" uid="uid://gd0xv5pnb77c" path="res://botones/iniciar_normal.png" id="5_t8yh4"]
+[ext_resource type="Texture2D" uid="uid://cicqqow603abb" path="res://botones/iniciar_pressed.png" id="6_ndg0s"]
+[ext_resource type="Texture2D" uid="uid://duc2r6f2bfv7k" path="res://botones/iniciar_hover.png" id="7_b0ypa"]
+[ext_resource type="Texture2D" uid="uid://c6frhwosvsqjm" path="res://botones/salir_normal.png" id="8_ejjks"]
+[ext_resource type="Texture2D" uid="uid://n6uijnssg45h" path="res://botones/salir_pressed.png" id="9_v5a10"]
 
 [node name="Finaldejuego" type="Control"]
 layout_mode = 3
@@ -21,12 +27,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_ncsh7")
+texture = ExtResource("3_hnts3")
 metadata/_edit_use_anchors_ = true
+
+[node name="LogoMenu" type="Sprite2D" parent="."]
+position = Vector2(964, 231)
+scale = Vector2(0.431481, 0.431481)
+texture = ExtResource("4_cc7yi")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.387037
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -45,18 +57,28 @@ bbcode_enabled = true
 text = "[center]¡Ganaste! :D :D :D[/center]"
 scroll_active = false
 
-[node name="repetir" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="repetir" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "¡Volver a jugar! :D"
+texture_normal = ExtResource("5_t8yh4")
+texture_pressed = ExtResource("6_ndg0s")
+texture_hover = ExtResource("7_b0ypa")
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
 
 [node name="siguiente" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = " Siguiente nivel (en construcción) "
 
-[node name="salir" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
-text = "Salir :(
-"
+
+[node name="salir" type="TextureButton" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_ejjks")
+texture_pressed = ExtResource("9_v5a10")
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/repetir" to="." method="_on_repetir_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/salir" to="." method="_on_salir_pressed"]

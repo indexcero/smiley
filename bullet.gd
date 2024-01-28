@@ -1,7 +1,7 @@
 extends Area2D
 
 var velocity: Vector2 = Vector2()
-var duration= 30
+var duration= 5
 
 func _process(delta):
 	position+= velocity * delta 

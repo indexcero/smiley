@@ -1,7 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://debpb67531oh6"]
+[gd_scene load_steps=12 format=3 uid="uid://debpb67531oh6"]
 
-[ext_resource type="Texture2D" uid="uid://byv431c0xslyd" path="res://Francotirador.png" id="1_acpq8"]
 [ext_resource type="Script" path="res://francotirador.gd" id="1_pwhti"]
+[ext_resource type="Texture2D" uid="uid://dvvpl33qcyyl7" path="res://seq/francotir/apunta0000.png" id="2_vaw2n"]
+[ext_resource type="Texture2D" uid="uid://24vbin27b1ad" path="res://seq/francotir/apunta0001.png" id="3_wmhib"]
+[ext_resource type="Texture2D" uid="uid://x12w7o0qprnt" path="res://seq/francotir/apunta0002.png" id="4_u3ir5"]
+[ext_resource type="Texture2D" uid="uid://bjekhlespi0y3" path="res://seq/francotir/apunta0003.png" id="5_nmpr6"]
+[ext_resource type="Texture2D" uid="uid://bd2m327l20c7l" path="res://seq/francotir/apunta0004.png" id="6_q8gtg"]
+[ext_resource type="Texture2D" uid="uid://clgxfbwabptee" path="res://seq/francotir/apunta0005.png" id="7_6rvdj"]
+[ext_resource type="Texture2D" uid="uid://dcpcvauip8oja" path="res://seq/francotir/apunta0006.png" id="8_n8qcb"]
+[ext_resource type="Texture2D" uid="uid://bp11tad2h0lsv" path="res://seq/francotir/apunta0007.png" id="9_b2snm"]
+[ext_resource type="Texture2D" uid="uid://cejsgei01mxef" path="res://seq/francotir/apunta0008.png" id="10_f1miq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3bwk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vaw2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wmhib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_u3ir5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nmpr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q8gtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6rvdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_n8qcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b2snm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f1miq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
 
 [node name="francotirador" type="Node2D"]
 script = ExtResource("1_pwhti")
@@ -9,10 +52,12 @@ script = ExtResource("1_pwhti")
 [node name="personaje" type="Node2D" parent="."]
 scale = Vector2(-0.0172419, -0.038443)
 
-[node name="Francotirador" type="Sprite2D" parent="."]
+[node name="Francotirador" type="AnimatedSprite2D" parent="."]
 position = Vector2(-10, -7)
 scale = Vector2(0.497298, 0.497298)
-texture = ExtResource("1_acpq8")
+sprite_frames = SubResource("SpriteFrames_g3bwk")
+autoplay = "default"
+frame_progress = 0.358662
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Francotirador"]
 

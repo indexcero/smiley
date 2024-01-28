@@ -1,8 +1,80 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpexdg4hjkh27"]
+[gd_scene load_steps=18 format=3 uid="uid://cpexdg4hjkh27"]
 
 [ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_ecwg2"]
 [ext_resource type="Script" path="res://finaldejuego.gd" id="2_ufncy"]
-[ext_resource type="Texture2D" uid="uid://domg8ffu8dpjc" path="res://splash_screen.png" id="3_60ti4"]
+[ext_resource type="Texture2D" uid="uid://bo50j3jb2dk1f" path="res://fondo_menu_inicial.png" id="3_7oayl"]
+[ext_resource type="Texture2D" uid="uid://btqfr7jf3abyk" path="res://Logo_menu.png" id="4_bcha3"]
+[ext_resource type="Texture2D" uid="uid://bdm8g17wkjl2q" path="res://nubes/nube2.png" id="4_rtn31"]
+[ext_resource type="Texture2D" uid="uid://ciyetiabqb8io" path="res://nubes/niebla_suave.png" id="4_yflyg"]
+[ext_resource type="Texture2D" uid="uid://gd0xv5pnb77c" path="res://botones/iniciar_normal.png" id="5_d1r10"]
+[ext_resource type="Texture2D" uid="uid://cicqqow603abb" path="res://botones/iniciar_pressed.png" id="6_jrkpk"]
+[ext_resource type="Texture2D" uid="uid://duc2r6f2bfv7k" path="res://botones/iniciar_hover.png" id="7_exybj"]
+[ext_resource type="Texture2D" uid="uid://dvtougko04whf" path="res://botones/Personaliza_normal.png" id="8_lewya"]
+[ext_resource type="Texture2D" uid="uid://brgkdg34hw3w0" path="res://botones/Personaliz_pressed.png" id="9_e5tka"]
+[ext_resource type="Texture2D" uid="uid://t7jubpamytme" path="res://botones/Personaliza_hover.png" id="10_ljjr2"]
+[ext_resource type="Texture2D" uid="uid://c6frhwosvsqjm" path="res://botones/salir_normal.png" id="11_gk4tv"]
+[ext_resource type="Texture2D" uid="uid://n6uijnssg45h" path="res://botones/salir_pressed.png" id="12_t2om5"]
+
+[sub_resource type="Animation" id="Animation_3pat6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NieblaSuave:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1603, 447)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Nube2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2637, 458)]
+}
+
+[sub_resource type="Animation" id="Animation_vasp1"]
+resource_name = "idle_menu"
+length = 80.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NieblaSuave:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 80),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1603, 447), Vector2(404, 489)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Nube2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 80),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-21, 449), Vector2(2637, 458)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yaiq2"]
+_data = {
+"RESET": SubResource("Animation_3pat6"),
+"idle_menu": SubResource("Animation_vasp1")
+}
 
 [node name="Finaldejuego" type="Control"]
 layout_mode = 3
@@ -21,12 +93,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_60ti4")
+texture = ExtResource("3_7oayl")
 metadata/_edit_use_anchors_ = true
+
+[node name="Nube2" type="Sprite2D" parent="."]
+position = Vector2(2637, 458)
+rotation = -2.99149
+scale = Vector2(0.33071, 0.346138)
+texture = ExtResource("4_rtn31")
+
+[node name="NieblaSuave" type="Sprite2D" parent="."]
+position = Vector2(1603, 447)
+scale = Vector2(0.57625, 0.57625)
+texture = ExtResource("4_yflyg")
+
+[node name="LogoMenu" type="Sprite2D" parent="."]
+position = Vector2(967, 524)
+texture = ExtResource("4_bcha3")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.366667
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -45,18 +133,28 @@ theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "[center][/center]"
 
-[node name="repetir" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="repetir" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "¡Jugar! :D"
+texture_normal = ExtResource("5_d1r10")
+texture_pressed = ExtResource("6_jrkpk")
+texture_hover = ExtResource("7_exybj")
 
-[node name="personalizar" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="personalizar" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Personalizar :)"
+texture_normal = ExtResource("8_lewya")
+texture_pressed = ExtResource("9_e5tka")
+texture_hover = ExtResource("10_ljjr2")
 
-[node name="salir" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="salir" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Salir :(
-"
+texture_normal = ExtResource("11_gk4tv")
+texture_pressed = ExtResource("12_t2om5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_yaiq2")
+}
+autoplay = "idle_menu"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/repetir" to="." method="_on_repetir_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/salir" to="." method="_on_salir_pressed"]

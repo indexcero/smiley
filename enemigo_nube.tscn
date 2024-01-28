@@ -1,10 +1,137 @@
-[gd_scene load_steps=8 format=3 uid="uid://duc15mrgv1c23"]
+[gd_scene load_steps=38 format=3 uid="uid://duc15mrgv1c23"]
 
 [ext_resource type="Script" path="res://enemigo_nube.gd" id="1_8dlsg"]
-[ext_resource type="Texture2D" uid="uid://dp6ha50xui7r7" path="res://nube_enojada.png" id="1_j1h5t"]
+[ext_resource type="Texture2D" uid="uid://bjmt1ll7rbpm4" path="res://seq/nube_enemigo_seq/nube_x0000.png" id="2_bm6cl"]
+[ext_resource type="Texture2D" uid="uid://cyqcfvk7mup3l" path="res://seq/nube_enemigo_seq/nube_x0001.png" id="3_hlhtn"]
+[ext_resource type="Texture2D" uid="uid://bh6hgmk2gt7re" path="res://seq/nube_enemigo_seq/nube_x0002.png" id="4_erjg6"]
+[ext_resource type="Texture2D" uid="uid://dh5m81e0m7xuy" path="res://seq/nube_enemigo_seq/nube_x0003.png" id="5_6vtt8"]
+[ext_resource type="Texture2D" uid="uid://d0mq3wqp3cxoy" path="res://seq/nube_enemigo_seq/nube_x0004.png" id="6_3leej"]
+[ext_resource type="Texture2D" uid="uid://c7x6hht38hqj7" path="res://seq/nube_enemigo_seq/nube_x0005.png" id="7_m44p0"]
+[ext_resource type="Texture2D" uid="uid://ckeksqmn7x8gd" path="res://seq/nube_enemigo_seq/nube_x0006.png" id="8_7k6d6"]
+[ext_resource type="Texture2D" uid="uid://bj1xg8u1877e7" path="res://seq/nube_enemigo_seq/nube_x0007.png" id="9_cyu0d"]
+[ext_resource type="Texture2D" uid="uid://b88x3vgrqudga" path="res://seq/nube_enemigo_seq/nube_x0008.png" id="10_te31w"]
+[ext_resource type="Texture2D" uid="uid://xlnwkv47qahc" path="res://seq/nube_enemigo_seq/nube_x0009.png" id="11_i4tsc"]
+[ext_resource type="Texture2D" uid="uid://cc6d8b4feaqo5" path="res://seq/nube_enemigo_seq/nube_x0010.png" id="12_bncpq"]
+[ext_resource type="Texture2D" uid="uid://bqqge8vccv82e" path="res://seq/nube_enemigo_seq/nube_x0011.png" id="13_yqr6t"]
+[ext_resource type="Texture2D" uid="uid://dgvu8xkf4hakj" path="res://seq/nube_enemigo_seq/nube_x0012.png" id="14_8w5rt"]
+[ext_resource type="Texture2D" uid="uid://cx0pn8fggp10g" path="res://seq/nube_enemigo_seq/nube_x0013.png" id="15_mwihv"]
+[ext_resource type="Texture2D" uid="uid://dsruhim8cefgm" path="res://seq/nube_enemigo_seq/nube_x0014.png" id="16_nd6lj"]
+[ext_resource type="Texture2D" uid="uid://c4x078i1sri4c" path="res://seq/nube_enemigo_seq/nube_x0015.png" id="17_60lt6"]
+[ext_resource type="Texture2D" uid="uid://clpiahdv0vfy8" path="res://seq/nube_enemigo_seq/nube_x0016.png" id="18_ih5ea"]
+[ext_resource type="Texture2D" uid="uid://be5imrfpl3t4t" path="res://seq/nube_enemigo_seq/nube_x0017.png" id="19_j07cu"]
+[ext_resource type="Texture2D" uid="uid://bl7r80j63cwcw" path="res://seq/nube_enemigo_seq/nube_x0018.png" id="20_h151f"]
+[ext_resource type="Texture2D" uid="uid://br1nm5hrudt4e" path="res://seq/nube_enemigo_seq/nube_x0019.png" id="21_algfx"]
+[ext_resource type="Texture2D" uid="uid://7cj5pkkk4p48" path="res://seq/nube_enemigo_seq/nube_x0020.png" id="22_ltgjv"]
+[ext_resource type="Texture2D" uid="uid://dspml0l4lt3jj" path="res://seq/nube_enemigo_seq/nube_x0021.png" id="23_c1i6x"]
+[ext_resource type="Texture2D" uid="uid://k26hi34so0kf" path="res://seq/nube_enemigo_seq/nube_x0022.png" id="24_yuuj4"]
+[ext_resource type="Texture2D" uid="uid://cshfnfo6kemn1" path="res://seq/nube_enemigo_seq/nube_x0025.png" id="25_dqpog"]
+[ext_resource type="Texture2D" uid="uid://b1nmjve2qpvix" path="res://seq/nube_enemigo_seq/nube_x0026.png" id="26_kumoi"]
+[ext_resource type="Texture2D" uid="uid://cxen4783xlons" path="res://seq/nube_enemigo_seq/nube_x0027.png" id="27_ri72u"]
+[ext_resource type="Texture2D" uid="uid://dhj256wou53tu" path="res://seq/nube_enemigo_seq/nube_x0028.png" id="28_6atme"]
+[ext_resource type="Texture2D" uid="uid://cs2alw5o64qta" path="res://seq/nube_enemigo_seq/nube_x0029.png" id="29_qlkob"]
+[ext_resource type="Texture2D" uid="uid://cr3gw6m8vw3r2" path="res://seq/nube_enemigo_seq/nube_x0042.png" id="30_wgra7"]
+[ext_resource type="Texture2D" uid="uid://bpyqs6wuyd7l6" path="res://seq/nube_enemigo_seq/nube_x0043.png" id="31_s8t8b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_skw7l"]
 radius = 234.002
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7l5k1"]
+animations = [{
+"frames": [{
+"duration": 0.6,
+"texture": ExtResource("2_bm6cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hlhtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_erjg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6vtt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3leej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m44p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7k6d6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cyu0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_te31w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_i4tsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bncpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_yqr6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8w5rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mwihv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_nd6lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_60lt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ih5ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_j07cu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h151f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_algfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ltgjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_c1i6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_yuuj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dqpog")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_kumoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ri72u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6atme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_qlkob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wgra7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_s8t8b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 47.0
+}]
 
 [sub_resource type="Animation" id="Animation_xy0iu"]
 length = 0.001
@@ -125,10 +252,12 @@ position = Vector2(-147, 52)
 scale = Vector2(0.601064, 0.537037)
 shape = SubResource("CircleShape2D_skw7l")
 
-[node name="NubeEnojada" type="Sprite2D" parent="enemigo"]
+[node name="NubeEnojada" type="AnimatedSprite2D" parent="enemigo"]
 position = Vector2(-21, 1)
 scale = Vector2(1.38824, 1.38824)
-texture = ExtResource("1_j1h5t")
+sprite_frames = SubResource("SpriteFrames_7l5k1")
+autoplay = "default"
+frame_progress = 0.590311
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

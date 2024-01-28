@@ -1,9 +1,113 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqt7r1cn6sp46"]
+[gd_scene load_steps=31 format=3 uid="uid://dqt7r1cn6sp46"]
 
 [ext_resource type="Script" path="res://enemigo_movil.gd" id="1_prdr7"]
+[ext_resource type="Texture2D" uid="uid://dnemnyjtx2nq8" path="res://seq/bichito_rojo/rojo0001.png" id="2_vw73d"]
+[ext_resource type="Texture2D" uid="uid://basevvbbtmdxu" path="res://seq/bichito_rojo/rojo0002.png" id="3_1pg3o"]
+[ext_resource type="Texture2D" uid="uid://kb2kjyny2tf8" path="res://seq/bichito_rojo/rojo0003.png" id="4_g5ry0"]
+[ext_resource type="Texture2D" uid="uid://deawbmvgqr00k" path="res://seq/bichito_rojo/rojo0004.png" id="5_2bkfa"]
+[ext_resource type="Texture2D" uid="uid://c83yqwe4m21r4" path="res://seq/bichito_rojo/rojo0005.png" id="6_h65a3"]
+[ext_resource type="Texture2D" uid="uid://cmmc5w0pr4qow" path="res://seq/bichito_rojo/rojo0006.png" id="7_ukqrr"]
+[ext_resource type="Texture2D" uid="uid://kvv8kr2d3hwg" path="res://seq/bichito_rojo/rojo0007.png" id="8_nb5e1"]
+[ext_resource type="Texture2D" uid="uid://dys1bpfowr6gx" path="res://seq/bichito_rojo/rojo0008.png" id="9_d3wjb"]
+[ext_resource type="Texture2D" uid="uid://l0warwibrypg" path="res://seq/bichito_rojo/rojo0009.png" id="10_febev"]
+[ext_resource type="Texture2D" uid="uid://cdc4tujw6ca8i" path="res://seq/bichito_rojo/rojo0010.png" id="11_3w023"]
+[ext_resource type="Texture2D" uid="uid://ddyxwmk4lpocg" path="res://seq/bichito_rojo/rojo0011.png" id="12_c17w6"]
+[ext_resource type="Texture2D" uid="uid://ntkugcmgh3h5" path="res://seq/bichito_rojo/rojo0012.png" id="13_um0mq"]
+[ext_resource type="Texture2D" uid="uid://do7u8aw42vva4" path="res://seq/bichito_rojo/rojo0013.png" id="14_3gsh8"]
+[ext_resource type="Texture2D" uid="uid://2jjx7j2ea0fe" path="res://seq/bichito_rojo/rojo0014.png" id="15_6tyic"]
+[ext_resource type="Texture2D" uid="uid://cnv6dchofjrd3" path="res://seq/bichito_rojo/rojo0015.png" id="16_gbhqi"]
+[ext_resource type="Texture2D" uid="uid://do8mcxw1840sw" path="res://seq/bichito_rojo/rojo0016.png" id="17_3mqex"]
+[ext_resource type="Texture2D" uid="uid://doed0gg2j7llr" path="res://seq/bichito_rojo/rojo0017.png" id="18_q8n3a"]
+[ext_resource type="Texture2D" uid="uid://bdo1vyujhtdd0" path="res://seq/bichito_rojo/rojo0018.png" id="19_yq5i8"]
+[ext_resource type="Texture2D" uid="uid://db32ow4cxijdg" path="res://seq/bichito_rojo/rojo0019.png" id="20_llh0n"]
+[ext_resource type="Texture2D" uid="uid://doaex62jrslqh" path="res://seq/bichito_rojo/rojo0020.png" id="21_llqqb"]
+[ext_resource type="Texture2D" uid="uid://d0v1qlc14vo0i" path="res://seq/bichito_rojo/rojo0021.png" id="22_72nkf"]
+[ext_resource type="Texture2D" uid="uid://dcysm706j8pt2" path="res://seq/bichito_rojo/rojo0022.png" id="23_bipld"]
+[ext_resource type="Texture2D" uid="uid://d06i0x4ebvu7s" path="res://seq/bichito_rojo/rojo0023.png" id="24_80hk5"]
+[ext_resource type="Texture2D" uid="uid://b30pdu05a0vr0" path="res://seq/bichito_rojo/rojo0024.png" id="25_kxlmq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_skw7l"]
-radius = 234.002
+radius = 248.582
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34snx"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": ExtResource("2_vw73d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1pg3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_g5ry0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2bkfa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h65a3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ukqrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_nb5e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_d3wjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_febev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3w023")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_c17w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_um0mq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3gsh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6tyic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gbhqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3mqex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_q8n3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_yq5i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_llh0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_llqqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_72nkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bipld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_80hk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kxlmq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
 
 [sub_resource type="Animation" id="Animation_xy0iu"]
 length = 0.001
@@ -68,29 +172,16 @@ script = ExtResource("1_prdr7")
 
 [node name="enemigo" type="Node2D" parent="."]
 
-[node name="Polygon2D" type="Polygon2D" parent="enemigo"]
-position = Vector2(-1, 1)
-color = Color(0.682353, 0.137255, 0.0313726, 1)
-polygon = PackedVector2Array(-2, -204, -175, -167, -260, -1, -195, 185, 3, 267, 196, 171, 254, 1, 193, -166)
-
-[node name="Polygon2D2" type="Polygon2D" parent="enemigo"]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-81, -113, -163, -40, -101, 39, -18, -37)
-
-[node name="Polygon2D3" type="Polygon2D" parent="enemigo"]
-position = Vector2(210, 4)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-81, -113, -163, -40, -101, 39, -18, -37)
-
-[node name="Polygon2D4" type="Polygon2D" parent="enemigo"]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(-137, 118, -82, 78, -43, 137, 20, 84, 55, 146, 133, 86, 163, 141, 95, 198, 46, 166, 2, 218, -36, 161, -100, 195, -111, 152, -164, 159)
-
 [node name="area_enemigo" type="Area2D" parent="enemigo"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemigo/area_enemigo"]
-position = Vector2(0, 29)
+position = Vector2(0, 19)
 shape = SubResource("CircleShape2D_skw7l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="enemigo"]
+sprite_frames = SubResource("SpriteFrames_34snx")
+autoplay = "default"
+frame_progress = 0.811405
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
