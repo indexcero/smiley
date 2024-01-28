@@ -332,9 +332,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_ufp6y"]
 radius = 360.112
 
-[node name="esfera_01" type="StaticBody2D"]
+[node name="esfera_01" type="StaticBody2D" groups=["esferas"]]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["esferas"]]
 position = Vector2(0, -1)
 scale = Vector2(1.79975, 1.79975)
 sprite_frames = SubResource("SpriteFrames_skeho")
@@ -342,5 +342,5 @@ autoplay = "default"
 frame = 18
 frame_progress = 0.716499
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["esferas"]]
 shape = SubResource("CircleShape2D_ufp6y")

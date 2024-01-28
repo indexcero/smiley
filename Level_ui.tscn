@@ -1,10 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2b73ysf774fq"]
+[gd_scene load_steps=5 format=3 uid="uid://d2b73ysf774fq"]
 
 [ext_resource type="Script" path="res://level_ui.gd" id="1_rqht6"]
+[ext_resource type="FontFile" uid="uid://s1fg6i6ti3m0" path="res://SegaArcadeFont-Regular.ttf" id="2_866jd"]
+[ext_resource type="Script" path="res://tiempo_marcador.gd" id="3_c54j3"]
 
 [sub_resource type="Theme" id="Theme_qpw6o"]
 default_font_size = 70
+GridContainer/constants/h_separation = 9
+GridContainer/constants/v_separation = 7
 RichTextLabel/colors/default_color = Color(0.890196, 0.960784, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/outline_size = 12
+RichTextLabel/fonts/bold_font = ExtResource("2_866jd")
+RichTextLabel/fonts/normal_font = ExtResource("2_866jd")
 
 [node name="level_ui" type="Control"]
 layout_mode = 3
@@ -17,7 +25,9 @@ script = ExtResource("1_rqht6")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_left = 0.0255208
+anchor_top = 0.037037
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -26,18 +36,36 @@ theme = SubResource("Theme_qpw6o")
 columns = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="VSeparator" type="VSeparator" parent="GridContainer"]
-custom_minimum_size = Vector2(60, 0)
-layout_mode = 2
-
 [node name="RichTextLabel5" type="RichTextLabel" parent="GridContainer"]
-custom_minimum_size = Vector2(210, 20)
+custom_minimum_size = Vector2(156.495, 20)
 layout_mode = 2
-text = "Vidas:"
+bbcode_enabled = true
+text = "[center]Vidas:[/center]"
 fit_content = true
 
 [node name="cantidad_de_vidas" type="RichTextLabel" parent="GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+bbcode_enabled = true
 text = "XX"
 fit_content = true
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="GridContainer"]
+custom_minimum_size = Vector2(201.79, 20)
+layout_mode = 2
+bbcode_enabled = true
+text = "[center]Tiempo:[/center]"
+fit_content = true
+
+[node name="tiempo_marcador" type="RichTextLabel" parent="GridContainer"]
+custom_minimum_size = Vector2(219.695, 20)
+layout_mode = 2
+bbcode_enabled = true
+text = "00:00:00"
+fit_content = true
+script = ExtResource("3_c54j3")
+
+[node name="Timer" type="Timer" parent="GridContainer/tiempo_marcador"]
+wait_time = 0.1
+
+[connection signal="timeout" from="GridContainer/tiempo_marcador/Timer" to="GridContainer/tiempo_marcador" method="_on_timer_timeout"]

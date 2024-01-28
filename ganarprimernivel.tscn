@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://3vydug3s56k2"]
+[gd_scene load_steps=11 format=3 uid="uid://3vydug3s56k2"]
 
 [ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_na52q"]
 [ext_resource type="Script" path="res://finaldejuego.gd" id="2_04m2h"]
 [ext_resource type="Texture2D" uid="uid://bo50j3jb2dk1f" path="res://fondo_menu_inicial.png" id="3_hnts3"]
 [ext_resource type="Texture2D" uid="uid://btqfr7jf3abyk" path="res://Logo_menu.png" id="4_cc7yi"]
+[ext_resource type="Script" path="res://tiempo_marcador_final.gd" id="5_nkn5i"]
 [ext_resource type="Texture2D" uid="uid://gd0xv5pnb77c" path="res://botones/iniciar_normal.png" id="5_t8yh4"]
 [ext_resource type="Texture2D" uid="uid://cicqqow603abb" path="res://botones/iniciar_pressed.png" id="6_ndg0s"]
 [ext_resource type="Texture2D" uid="uid://duc2r6f2bfv7k" path="res://botones/iniciar_hover.png" id="7_b0ypa"]
@@ -38,15 +39,17 @@ texture = ExtResource("4_cc7yi")
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.387037
+anchor_top = 0.29537
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_na52q")
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(500, 100)
@@ -56,6 +59,21 @@ theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "[center]¡Ganaste! :D :D :D[/center]"
 scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 98.455)
+layout_mode = 2
+text = "Tiempo:"
+
+[node name="tiempo_marcador" type="RichTextLabel" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 98.455)
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 0.568627, 0, 1)
+text = "00:00:00"
+script = ExtResource("5_nkn5i")
 
 [node name="repetir" type="TextureButton" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

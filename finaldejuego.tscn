@@ -1,7 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdk6p1i43nwg0"]
+[gd_scene load_steps=37 format=3 uid="uid://bdk6p1i43nwg0"]
 
 [ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_x5lvj"]
 [ext_resource type="Script" path="res://finaldejuego.gd" id="2_gihs7"]
+[ext_resource type="Texture2D" uid="uid://i1vdoa3r11yg" path="res://decepcion.png" id="3_r1w71"]
+[ext_resource type="Texture2D" uid="uid://dnemnyjtx2nq8" path="res://seq/bichito_rojo/rojo0001.png" id="4_u78ka"]
+[ext_resource type="Texture2D" uid="uid://basevvbbtmdxu" path="res://seq/bichito_rojo/rojo0002.png" id="5_30hqw"]
+[ext_resource type="Texture2D" uid="uid://kb2kjyny2tf8" path="res://seq/bichito_rojo/rojo0003.png" id="6_qm157"]
+[ext_resource type="Texture2D" uid="uid://deawbmvgqr00k" path="res://seq/bichito_rojo/rojo0004.png" id="7_8ya2m"]
+[ext_resource type="Texture2D" uid="uid://c83yqwe4m21r4" path="res://seq/bichito_rojo/rojo0005.png" id="8_axx63"]
+[ext_resource type="Texture2D" uid="uid://cmmc5w0pr4qow" path="res://seq/bichito_rojo/rojo0006.png" id="9_07uim"]
+[ext_resource type="Texture2D" uid="uid://kvv8kr2d3hwg" path="res://seq/bichito_rojo/rojo0007.png" id="10_xp1gi"]
+[ext_resource type="Texture2D" uid="uid://dys1bpfowr6gx" path="res://seq/bichito_rojo/rojo0008.png" id="11_24ykn"]
+[ext_resource type="Texture2D" uid="uid://l0warwibrypg" path="res://seq/bichito_rojo/rojo0009.png" id="12_mdqmj"]
+[ext_resource type="Texture2D" uid="uid://cdc4tujw6ca8i" path="res://seq/bichito_rojo/rojo0010.png" id="13_har3r"]
+[ext_resource type="Texture2D" uid="uid://ddyxwmk4lpocg" path="res://seq/bichito_rojo/rojo0011.png" id="14_tt7cq"]
+[ext_resource type="Texture2D" uid="uid://ntkugcmgh3h5" path="res://seq/bichito_rojo/rojo0012.png" id="15_in0rc"]
+[ext_resource type="Texture2D" uid="uid://do7u8aw42vva4" path="res://seq/bichito_rojo/rojo0013.png" id="16_3xlux"]
+[ext_resource type="Texture2D" uid="uid://2jjx7j2ea0fe" path="res://seq/bichito_rojo/rojo0014.png" id="17_1s3p4"]
+[ext_resource type="Texture2D" uid="uid://cnv6dchofjrd3" path="res://seq/bichito_rojo/rojo0015.png" id="18_nw48q"]
+[ext_resource type="Texture2D" uid="uid://do8mcxw1840sw" path="res://seq/bichito_rojo/rojo0016.png" id="19_1k6b4"]
+[ext_resource type="Texture2D" uid="uid://doed0gg2j7llr" path="res://seq/bichito_rojo/rojo0017.png" id="20_uqrkw"]
+[ext_resource type="Texture2D" uid="uid://bdo1vyujhtdd0" path="res://seq/bichito_rojo/rojo0018.png" id="21_x2q26"]
+[ext_resource type="Texture2D" uid="uid://db32ow4cxijdg" path="res://seq/bichito_rojo/rojo0019.png" id="22_gonk1"]
+[ext_resource type="Texture2D" uid="uid://doaex62jrslqh" path="res://seq/bichito_rojo/rojo0020.png" id="23_mals0"]
+[ext_resource type="Texture2D" uid="uid://d0v1qlc14vo0i" path="res://seq/bichito_rojo/rojo0021.png" id="24_3vrt4"]
+[ext_resource type="Texture2D" uid="uid://dcysm706j8pt2" path="res://seq/bichito_rojo/rojo0022.png" id="25_ux2o0"]
+[ext_resource type="Texture2D" uid="uid://d06i0x4ebvu7s" path="res://seq/bichito_rojo/rojo0023.png" id="26_mr0c6"]
+[ext_resource type="Texture2D" uid="uid://b30pdu05a0vr0" path="res://seq/bichito_rojo/rojo0024.png" id="27_y3oen"]
+[ext_resource type="FontFile" uid="uid://s1fg6i6ti3m0" path="res://SegaArcadeFont-Regular.ttf" id="28_ud7o7"]
 
 [sub_resource type="Gradient" id="Gradient_2i851"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -11,6 +37,132 @@ gradient = SubResource("Gradient_2i851")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_y0oby"]
 diffuse_texture = SubResource("GradientTexture1D_lp2sv")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ba0vr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_u78ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_30hqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qm157")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8ya2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_axx63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_07uim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_xp1gi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_24ykn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_mdqmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_har3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_tt7cq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_in0rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3xlux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1s3p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nw48q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1k6b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_uqrkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_x2q26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_gonk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mals0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_3vrt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ux2o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mr0c6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_y3oen")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tiofp"]
+bg_color = Color(0.815686, 0.529412, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.901961, 0, 0.0666667, 1)
+
+[sub_resource type="Animation" id="Animation_64xpm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("decepcionados:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_0ydrc"]
+resource_name = "new_animation"
+length = 60.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("decepcionados:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 60),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3000)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmk64"]
+_data = {
+"RESET": SubResource("Animation_64xpm"),
+"new_animation": SubResource("Animation_0ydrc")
+}
 
 [node name="Finaldejuego" type="Control"]
 layout_mode = 3
@@ -32,9 +184,37 @@ grow_vertical = 2
 texture = SubResource("CanvasTexture_y0oby")
 metadata/_edit_use_anchors_ = true
 
+[node name="decepcionados" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="decepcionados"]
+
+[node name="Decepcion" type="Sprite2D" parent="decepcionados"]
+position = Vector2(962, 544)
+texture = ExtResource("3_r1w71")
+
+[node name="Decepcion2" type="Sprite2D" parent="decepcionados"]
+position = Vector2(962, 1620)
+texture = ExtResource("3_r1w71")
+
+[node name="Decepcion3" type="Sprite2D" parent="decepcionados"]
+position = Vector2(962, 2701)
+texture = ExtResource("3_r1w71")
+
+[node name="Decepcion4" type="Sprite2D" parent="decepcionados"]
+position = Vector2(962, 3781)
+texture = ExtResource("3_r1w71")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(963, 301)
+scale = Vector2(1.23383, 1.28667)
+sprite_frames = SubResource("SpriteFrames_ba0vr")
+autoplay = "default"
+frame_progress = 0.00976467
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.249074
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -48,19 +228,34 @@ layout_mode = 2
 custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/default_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/normal_font_size = 70
+theme_override_fonts/normal_font = ExtResource("28_ud7o7")
+theme_override_font_sizes/normal_font_size = 99
 bbcode_enabled = true
 text = "[center]Moristes[/center]"
 
 [node name="repetir" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tiofp")
 text = "¡Volver a jugar! :D"
 
 [node name="salir" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "Salir :(
+text = "Salir :((
 "
+
+[node name="Decepcion5" type="Sprite2D" parent="."]
+position = Vector2(962, 4857)
+texture = ExtResource("3_r1w71")
+
+[node name="Decepcion6" type="Sprite2D" parent="."]
+position = Vector2(962, 5938)
+texture = ExtResource("3_r1w71")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_jmk64")
+}
+autoplay = "new_animation"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/repetir" to="." method="_on_repetir_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/salir" to="." method="_on_salir_pressed"]

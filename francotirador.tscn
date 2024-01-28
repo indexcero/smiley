@@ -67,7 +67,7 @@ polygon = PackedVector2Array(12.0652, 106.576, -98.5324, 110.598, -180.978, 50.2
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.15
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
