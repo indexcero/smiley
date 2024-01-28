@@ -1,0 +1,143 @@
+[gd_scene load_steps=8 format=3 uid="uid://duc15mrgv1c23"]
+
+[ext_resource type="Script" path="res://enemigo_nube.gd" id="1_8dlsg"]
+[ext_resource type="Texture2D" uid="uid://dp6ha50xui7r7" path="res://nube_enojada.png" id="1_j1h5t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_skw7l"]
+radius = 234.002
+
+[sub_resource type="Animation" id="Animation_xy0iu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemigo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemigo:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("enemigo:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_m28ec"]
+resource_name = "nube_animation"
+length = 8.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemigo:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 661.788, -0.25, 0, 0.25, 0, 2501.22, -0.6, -740.883, 0.1, -1583.96, 1153, -0.25, 0, 0.25, 0, 1950, -0.2, -1620.33, 0.2, 372.388, 2271.29, -0.37, 2222.65, 0.43, -1609.5, 2280, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9, 2.1, 3.2, 4.5, 5.27, 6, 8)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemigo:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -411.214, -0.25, 0, 0.21, -1507.31, -947.716, -0.25, 0, 0.25, 0, 362, -0.25, 0, 0.25, 0, -2.45142, -0.7, -1813.89, 0.7, -2094.91, -606, -0.25, 0, 0.25, 0, -79.0944, -0.62, 1558.41, 0.58, -1277.38, 283, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.9, 2.1, 3.2, 3.8, 4.5, 5.22, 6, 8)
+}
+
+[sub_resource type="Animation" id="Animation_f61ah"]
+resource_name = "vigilia"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 3485.06, -0.25, 0, 0.25, 0, 2982.72, -0.3, 581.134, 0.9, -453.088, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 2.3, 3.2, 4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -226, -0.8, 0, 0.7, -4, 0, -0.25, 0, 0.25, 0, -179.044, -0.8, 57, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3, 1.4, 2.4, 3.5, 4)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sgtb4"]
+_data = {
+"RESET": SubResource("Animation_xy0iu"),
+"nube_animation": SubResource("Animation_m28ec"),
+"vigilia": SubResource("Animation_f61ah")
+}
+
+[node name="enemigo nube" type="Node2D"]
+script = ExtResource("1_8dlsg")
+
+[node name="enemigo" type="Node2D" parent="."]
+
+[node name="area_enemigo" type="Area2D" parent="enemigo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemigo/area_enemigo"]
+position = Vector2(0, 29)
+shape = SubResource("CircleShape2D_skw7l")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="enemigo/area_enemigo"]
+position = Vector2(187, 52)
+scale = Vector2(0.601064, 0.537037)
+shape = SubResource("CircleShape2D_skw7l")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="enemigo/area_enemigo"]
+position = Vector2(-147, 52)
+scale = Vector2(0.601064, 0.537037)
+shape = SubResource("CircleShape2D_skw7l")
+
+[node name="NubeEnojada" type="Sprite2D" parent="enemigo"]
+position = Vector2(-21, 1)
+scale = Vector2(1.38824, 1.38824)
+texture = ExtResource("1_j1h5t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sgtb4")
+}
+autoplay = "nube_animation"
+
+[node name="Timer_nube" type="Timer" parent="."]
+wait_time = 0.7
+
+[connection signal="body_entered" from="enemigo/area_enemigo" to="." method="_on_area_enemigo_body_entered"]
+[connection signal="timeout" from="Timer_nube" to="." method="_on_timer_nube_timeout"]

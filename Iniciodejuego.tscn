@@ -1,16 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bdk6p1i43nwg0"]
+[gd_scene load_steps=4 format=3 uid="uid://cpexdg4hjkh27"]
 
-[ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_x5lvj"]
-[ext_resource type="Script" path="res://finaldejuego.gd" id="2_gihs7"]
-
-[sub_resource type="Gradient" id="Gradient_2i851"]
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_lp2sv"]
-gradient = SubResource("Gradient_2i851")
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_y0oby"]
-diffuse_texture = SubResource("GradientTexture1D_lp2sv")
+[ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_ecwg2"]
+[ext_resource type="Script" path="res://finaldejuego.gd" id="2_ufncy"]
+[ext_resource type="Texture2D" uid="uid://domg8ffu8dpjc" path="res://splash_screen.png" id="3_60ti4"]
 
 [node name="Finaldejuego" type="Control"]
 layout_mode = 3
@@ -19,8 +11,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_x5lvj")
-script = ExtResource("2_gihs7")
+theme = ExtResource("1_ecwg2")
+script = ExtResource("2_ufncy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -29,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CanvasTexture_y0oby")
+texture = ExtResource("3_60ti4")
 metadata/_edit_use_anchors_ = true
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -51,11 +43,15 @@ size_flags_horizontal = 4
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
-text = "[center]Moristes[/center]"
+text = "[center][/center]"
 
 [node name="repetir" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
-text = "¡Volver a jugar! :D"
+text = "¡Jugar! :D"
+
+[node name="personalizar" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Personalizar :)"
 
 [node name="salir" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2

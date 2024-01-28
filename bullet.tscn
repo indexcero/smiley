@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cofb6txxjvvgd"]
+
+[ext_resource type="Script" path="res://bullet.gd" id="1_d2ki1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvth3"]
+radius = 19.0
+height = 146.0
+
+[node name="bullet" type="Area2D"]
+scale = Vector2(0.0842145, 0.0568975)
+script = ExtResource("1_d2ki1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cvth3")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-3, 69, -15, 68, -20, 1, -2, -74, 20, 1, 18, 64)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

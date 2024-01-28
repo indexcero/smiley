@@ -1237,10 +1237,10 @@ func _process(delta):
 				remove_joint(rigid_body, joint)
 				_last_delete_time = Time.get_ticks_msec()
 				
-# Velocidad de movimiento en píxeles por segundo
-var speed = 1500
+# Velocidad de movimiento de smiley
+@export var speed = 1500
 
-# Vector de dirección actual
+
 var direction = Vector2.ZERO
 
 func _physics_process(delta):

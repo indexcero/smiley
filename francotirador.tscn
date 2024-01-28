@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://debpb67531oh6"]
+
+[ext_resource type="Texture2D" uid="uid://byv431c0xslyd" path="res://Francotirador.png" id="1_acpq8"]
+[ext_resource type="Script" path="res://francotirador.gd" id="1_pwhti"]
+
+[node name="francotirador" type="Node2D"]
+script = ExtResource("1_pwhti")
+
+[node name="personaje" type="Node2D" parent="."]
+scale = Vector2(-0.0172419, -0.038443)
+
+[node name="Francotirador" type="Sprite2D" parent="."]
+position = Vector2(-10, -7)
+scale = Vector2(0.497298, 0.497298)
+texture = ExtResource("1_acpq8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Francotirador"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Francotirador/StaticBody2D"]
+polygon = PackedVector2Array(12.0652, 106.576, -98.5324, 110.598, -180.978, 50.2716, -166.902, -28.1521, -118.641, -54.2934, -174.945, -144.782, -138.75, -215.163, -60.326, -239.293, -14.0761, -164.891, 54.2934, -185, 118.641, -134.728, 166.902, -104.565, 245.326, 38.2064, 191.032, 136.739, 106.576, 178.967)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

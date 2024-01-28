@@ -11,8 +11,9 @@ config_version=5
 [application]
 
 config/name="Soft_body_test"
-run/main_scene="res://smiley.tscn"
+run/main_scene="res://Iniciodejuego.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,7 +22,9 @@ Globals="*res://Globals.gd"
 
 [display]
 
-window/size/initial_position_type=0
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

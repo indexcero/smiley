@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqt7r1cn6sp46"]
+
+[ext_resource type="Script" path="res://enemigo_movil.gd" id="1_prdr7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_skw7l"]
+radius = 234.002
+
+[sub_resource type="Animation" id="Animation_xy0iu"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemigo:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemigo:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_f61ah"]
+resource_name = "vigilia"
+length = 6.0
+loop_mode = 2
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("enemigo:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 2370, -1.2, -149.803, 0.25, 0, 1579, -0.25, 0, 0.25, 0, 1604, -0.6, 2353.44, 0.25, 0, 2270, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3, 3, 4, 5.6, 6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("enemigo:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 442, -1.5, 321.979, 0.25, 0, -456, -0.5, -517.263, 0.25, 0, 4, -0.8, -1207.19, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.3, 3, 4, 5.6, 6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sgtb4"]
+_data = {
+"RESET": SubResource("Animation_xy0iu"),
+"vigilia": SubResource("Animation_f61ah")
+}
+
+[node name="Enemigo_móvil" type="Node2D"]
+script = ExtResource("1_prdr7")
+
+[node name="enemigo" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="enemigo"]
+position = Vector2(-1, 1)
+color = Color(0.682353, 0.137255, 0.0313726, 1)
+polygon = PackedVector2Array(-2, -204, -175, -167, -260, -1, -195, 185, 3, 267, 196, 171, 254, 1, 193, -166)
+
+[node name="Polygon2D2" type="Polygon2D" parent="enemigo"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-81, -113, -163, -40, -101, 39, -18, -37)
+
+[node name="Polygon2D3" type="Polygon2D" parent="enemigo"]
+position = Vector2(210, 4)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-81, -113, -163, -40, -101, 39, -18, -37)
+
+[node name="Polygon2D4" type="Polygon2D" parent="enemigo"]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-137, 118, -82, 78, -43, 137, 20, 84, 55, 146, 133, 86, 163, 141, 95, 198, 46, 166, 2, 218, -36, 161, -100, 195, -111, 152, -164, 159)
+
+[node name="area_enemigo" type="Area2D" parent="enemigo"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemigo/area_enemigo"]
+position = Vector2(0, 29)
+shape = SubResource("CircleShape2D_skw7l")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_sgtb4")
+}
+autoplay = "vigilia"
+
+[node name="Timer_enemigo" type="Timer" parent="."]
+wait_time = 0.3
+
+[connection signal="body_entered" from="enemigo/area_enemigo" to="." method="_on_area_enemigo_body_entered"]
+[connection signal="timeout" from="Timer_enemigo" to="." method="_on_timer_enemigo_timeout"]
