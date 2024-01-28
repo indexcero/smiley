@@ -13,3 +13,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	$AudioStreamPlayer2D_2.play()
+
+
+func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	$AudioStreamPlayer2D_2.play()

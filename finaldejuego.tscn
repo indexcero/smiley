@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bdk6p1i43nwg0"]
+[gd_scene load_steps=38 format=3 uid="uid://bdk6p1i43nwg0"]
 
 [ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_x5lvj"]
 [ext_resource type="Script" path="res://finaldejuego.gd" id="2_gihs7"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://d06i0x4ebvu7s" path="res://seq/bichito_rojo/rojo0023.png" id="26_mr0c6"]
 [ext_resource type="Texture2D" uid="uid://b30pdu05a0vr0" path="res://seq/bichito_rojo/rojo0024.png" id="27_y3oen"]
 [ext_resource type="FontFile" uid="uid://s1fg6i6ti3m0" path="res://SegaArcadeFont-Regular.ttf" id="28_ud7o7"]
+[ext_resource type="AudioStream" uid="uid://bcmb1busgai1q" path="res://muerte.wav" id="29_qdsqk"]
 
 [sub_resource type="Gradient" id="Gradient_2i851"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
@@ -257,5 +258,11 @@ libraries = {
 }
 autoplay = "new_animation"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_qdsqk")
+volume_db = -7.0
+autoplay = true
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/repetir" to="." method="_on_repetir_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/salir" to="." method="_on_salir_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

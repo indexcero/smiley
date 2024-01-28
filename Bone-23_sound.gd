@@ -14,9 +14,9 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	var sonidos = ["res://sound_effects/efe 7-6-Audio 1.wav","res://sound_effects/efe 8-6-Audio 1.wav","res://sound_effects/efe 9-6-Audio 1.wav","res://sound_effects/efe 10-6-Audio 1.wav"]
-	if !is_playing:
-		$AudioStreamPlayer2D.load(sonidos[randi_range(0,3)])
-		$AudioStreamPlayer2D.play()
+	#if !is_playing:
+	$AudioStreamPlayer2D.stream = load(sonidos[randi_range(0,3)])
+	$AudioStreamPlayer2D.play()
 	is_playing = 1
 	
 

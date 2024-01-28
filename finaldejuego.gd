@@ -10,3 +10,7 @@ func _input(event):
 
 func _on_salir_pressed():
 	get_tree().quit()
+
+
+func _on_audio_stream_player_finished():
+	$AudioStreamPlayer.play()

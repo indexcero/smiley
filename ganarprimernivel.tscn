@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://3vydug3s56k2"]
+[gd_scene load_steps=12 format=3 uid="uid://3vydug3s56k2"]
 
 [ext_resource type="Theme" uid="uid://ctdpphkiuqmci" path="res://Level_ui.tres" id="1_na52q"]
 [ext_resource type="Script" path="res://finaldejuego.gd" id="2_04m2h"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://duc2r6f2bfv7k" path="res://botones/iniciar_hover.png" id="7_b0ypa"]
 [ext_resource type="Texture2D" uid="uid://c6frhwosvsqjm" path="res://botones/salir_normal.png" id="8_ejjks"]
 [ext_resource type="Texture2D" uid="uid://n6uijnssg45h" path="res://botones/salir_pressed.png" id="9_v5a10"]
+[ext_resource type="AudioStream" uid="uid://cy72t27ymkhu7" path="res://menu_audio.wav" id="11_5oocf"]
 
 [node name="Finaldejuego" type="Control"]
 layout_mode = 3
@@ -97,6 +98,11 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("8_ejjks")
 texture_pressed = ExtResource("9_v5a10")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_5oocf")
+volume_db = -4.0
+autoplay = true
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/repetir" to="." method="_on_repetir_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/salir" to="." method="_on_salir_pressed"]

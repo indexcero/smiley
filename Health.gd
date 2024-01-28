@@ -12,4 +12,5 @@ func _process(delta):
 
 
 func _on_health_2d_body_entered(body):
+	$Audio_health.play()
 	queue_free()
